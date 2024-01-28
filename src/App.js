@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './componentes/Header';
+import FormPresupuesto from './componentes/FormPresupuesto'
+import { useState } from 'react';
+import MainControl from './componentes/MainControl';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [isValid, setIsValid] = useState(false);
+  const component = isValid ? <MainControl count={count} /> : <FormPresupuesto setCount = { setCount } setIsValid = { setIsValid } />;
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
+        { component }
       </header>
     </div>
   );
