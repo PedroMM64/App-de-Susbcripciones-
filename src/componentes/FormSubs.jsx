@@ -17,16 +17,17 @@ const FormSubs = ({ setType, setPrice, type, price, setSubs, subs }) => {
             id: Date.now()
         }
 
-        setSubs([...subs, data])
-        
+        setSubs([...subs, data]);
+        setType("");
+        setPrice("");
     }
 
-    return ( 
+    return (
         <div className="add-subscription">
             <h3>Agregar Subscripciones</h3>
             <form onSubmit={ handleSubs }>
                 <p>Servicio</p>
-                <select onChange={e => setType(e.target.value) }>
+                <select onChange={e => setType(e.target.value)} value={type} >
                     <option value="">--Elegir una subscripción--</option>
                     <option value="netflix">Netflix</option>
                     <option value="disneyPlus">Disney Plus</option>
@@ -37,7 +38,7 @@ const FormSubs = ({ setType, setPrice, type, price, setSubs, subs }) => {
                     <option value="appleTv">Apple TV</option>
                 </select>
                 <p>Cantidad</p>
-                <input type="number" placeholder="$20" onChange={e => setPrice(e.target.value) } />
+                <input type="number" placeholder="$20" onChange={e => setPrice(e.target.value)} value={price} />
                 <input type="submit" value="Agregar" />
             </form>
             {error ? <p className="error">Campos inválidos</p> : null}
