@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/App-de-Suscripciones/static/css/main.327bb841.css",
+    "main.js": "/App-de-Suscripciones/static/js/main.df8bfed6.js",
+    "index.html": "/App-de-Suscripciones/index.html",
+    "main.327bb841.css.map": "/App-de-Suscripciones/static/css/main.327bb841.css.map",
+    "main.df8bfed6.js.map": "/App-de-Suscripciones/static/js/main.df8bfed6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.327bb841.css",
+    "static/js/main.df8bfed6.js"
+  ]
+}
